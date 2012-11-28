@@ -1,0 +1,248 @@
+.so tmac.ref
+.\"
+.\" Set \n[*xyear] to Y2K-corrected 4-digit year.
+.\" (This is to counteract a Y2K bug in FreeBSD's *roff)
+.ie \n(yr<70 .nr *xyear \n(yr+2000
+.el .nr *xyear \n(yr+1900
+.nr *COPYYEAR \n[*xyear]
+.\"
+.\" Calculate 6-month draft expiration, put it in \*[*XP].
+.nr *xpmo \n[mo]+6
+.nr *xpy \n[*xyear]
+.if \n[*xpmo]>12 \{
+.nr *xpmo \n[*xpmo]-12
+.nr *xpy \n[*xpy]+1
+.\}
+.ds *XP \*[MONTH\n[*xpmo]] \n[dy], \n[*xpy]
+.\"
+.nr PS 11
+.nr VS 13
+.\"XXX macro for setting author
+.ds LF Walter Stanish. Payward Inc.
+.ds RF [Page %]
+.ds CF 
+.ds LH INTERNET-DRAFT
+.ds RH \*(MO \n[*xyear]
+.\"
+.ie n .ds *XT txt
+.el .ds *XT ps
+.\" --------------------------------------------------------------------------
+.\" Set to 0 when creating an I-D
+.ie 0 \{
+.ds *RV $Revision: 1.17 $
+.ds *XP \fINOT PUBLISHED\fP
+.ds *FN draft-ietf-pim-sm-v2-new-unpublished-\n[*xyear]\n(mo\n(dy
+.\}
+.el \{
+.ds *FN draft-ietf-pim-sm-v2-new-01
+.ds *RV
+.\}
+.ds CH Expires: \*[*XP]
+.\" --------------------------------------------------------------------------
+.if n \{
+.ftr C R
+.ftr CB B
+.\"	Set Page Length to Internet-Draft standard
+.pl 10.0i
+.\"	Set Page Offset to Internet-Draft standard
+.nr PO 0
+.\"	Set Line Length and Title Length to Internet-Draft standard
+.nr LL 7.2i
+.nr LT 7.2i
+.ll 7.2i
+.de PSPIC
+.ce 3
++-----------------------------------+
+| Figures omitted from text version |
++-----------------------------------+
+..
+\}
+.\" --------------------------------------------------------------------------
+.\" Usage:
+.\" .MH 3 "Title of this section" optional-reference
+.de MH
+.NH \\$1
+.ie "\\$1"1" \s+3\\$2\s-3
+.el \{\
+.ie "\\$1"2" \s+2\\$2\s-2
+.el \\$2 \}
+.TC "\\$2"
+'if \\n(.$>2 .REF \\$3
+.ds RF Section \\*(SN  [Page %]
+..
+.\" --------------------------------------------------------------------------
+.\" .BIP: like .IP but hanging indent is bold
+.de BIP
+.IP "\\fB\\$1\\fR" \\$2
+..
+.\" --------------------------------------------------------------------------
+.\" .CIP: like .IP but hanging indent is courier
+.de CIP
+.IP "\\fC\\$1\\fR" \\$2
+..
+.\" --------------------------------------------------------------------------
+.\" .BUP: like .IP but for bullets
+.de BUP
+.IP \(bu 2n
+..
+.\" --------------------------------------------------------------------------
+.\"	Don't align the right margin.
+.na
+.\"	No hyphenation.
+.nr HY 0
+.hy 0
+.\" --------------------------------------------------------------------------
+.\" - End *roff preamble
+.\" --------------------------------------------------------------------------
+.\"
+.\"
+.\" --------------------------------------------------------------------------
+.\" .IDBOILER: outputs standard I-D boilerplate.
+.\" Arguments: WG-name or "individual" or "i"
+.\" also the WG mailing list
+.\" Should take argument for conformance level to RFC2026
+.de IDBOILER
+.SH 
+Status of this Memo
+.LP
+.in 3
+.nf
+
+This memo defines an Experimental Protocol for the Internet
+community.  This memo does not specify an Internet standard of any
+kind.  Discussion and suggestions for improvement are requested.
+Distribution of this memo is unlimited.
+
+Internet-Drafts are working documents of the Internet Engineering
+Task Force (IETF).  Note that other groups may also distribute
+working documents as Internet-Drafts.  The list of current Internet-
+Drafts is at http://datatracker.ietf.org/drafts/current/.
+
+Internet-Drafts are draft documents valid for a maximum of six months
+and may be updated, replaced, or obsoleted by other documents at any
+time.  It is inappropriate to use Internet-Drafts as reference
+material or to cite them other than as "work in progress."
+
+This document is an individual submission. Comments are solicited
+and should be addressed to the author(s).
+
+This Internet-Draft is submitted in full conformance with the
+provisions of BCP 78 and BCP 79.
+
+This Internet-Draft will expire on \*[*XP].
+..
+
+.de RFC2119 
+The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL
+NOT", "SHOULD", "SHOULD NOT", "RECOMMENDED", "MAY", and
+"OPTIONAL" in this document are to be interpreted as described in
+BCP 14, RFC 2119 [RFC2119].
+..
+
+.de COPYSTATEMENT
+.if \\n(.$>0 .nr *COPYYEAR \\$1
+.SH
+Copyright Notice
+.LP
+.in 3
+Copyright (c) \\n[*COPYYEAR] IETF Trust and the persons identified as the
+document authors. All rights reserved.
+
+This document is subject to BCP 78 and the IETF Trust's Legal
+Provisions Relating to IETF Documents
+(http://trustee.ietf.org/license-info) in effect on the date of
+publication of this document.  Please review these documents
+carefully, as they describe your rights and restrictions with respect
+to this document.  Code Components extracted from this document must
+include Simplified BSD License text as described in Section 4.e of
+the Trust Legal Provisions and are provided without warranty as
+described in the Simplified BSD License.
+..
+.de COPYFULL
+.nf
+
+.fi
+..
+
+.\" .MH 1 "Full Copyright Statement"
+.\" .LP
+.\" .in 3
+.\" Copyright (C) The Internet Society (\\n[*COPYYEAR]). This
+.\" document is subject to the rights, licenses and restrictions
+.\" contained in BCP 78 and except as set forth therein, the authors
+.\" retain all their rights. 
+.\" 
+.\" .LP
+.\" .in 3
+.\" This document and translations of it may be copied and furnished to
+.\" others, and derivative works that comment on or otherwise explain it
+.\" or assist in its implementation may be prepared, copied, published
+.\" and distributed, in whole or in part, without restriction of any
+.\" kind, provided that the above copyright notice and this paragraph
+.\" are included on all such copies and derivative works. However, this
+.\" document itself may not be modified in any way, such as by removing
+.\" the copyright notice or references to the Internet Society or other
+.\" Internet organizations, except as needed for the purpose of
+.\" developing Internet standards in which case the procedures for
+.\" copyrights defined in the Internet Standards process must be
+.\" followed, or as required to translate it into languages other than
+.\" English.
+.\" .LP
+.\" .in 3
+.\" The limited permissions granted above are perpetual and will not be
+.\" revoked by the Internet Society or its successors or assigns.
+.\" .LP
+.\" .in 3
+.\" This document and the information contained herein is provided on an
+.\" "AS IS" basis and THE INTERNET SOCIETY AND THE INTERNET ENGINEERING
+.\" TASK FORCE DISCLAIMS ALL WARRANTIES, EXPRESS OR IMPLIED, INCLUDING
+.\" BUT NOT LIMITED TO ANY WARRANTY THAT THE USE OF THE INFORMATION
+.\" HEREIN WILL NOT INFRINGE ANY RIGHTS OR ANY IMPLIED WARRANTIES OF
+.\" MERCHANTABILITY OR FITNESS FOR A PARTICULAR PURPOSE.
+.\" 
+.\" .MH 1 "Disclaimer of Validity"
+.\" .LP 
+.\" .in 3 
+.\" 
+.\" This document and the information contained herein are provided
+.\" on an "AS IS" basis and THE CONTRIBUTOR, THE ORGANIZATION HE/SHE
+.\" REPRESENTS OR IS SPONSORED BY (IF ANY), THE INTERNET SOCIETY AND
+.\" THE INTERNET ENGINEERING TASK FORCE DISCLAIM ALL WARRANTIES,
+.\" EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO ANY WARRANTY
+.\" THAT THE USE OF THE INFORMATION HEREIN WILL NOT INFRINGE ANY
+.\" RIGHTS OR ANY IMPLIED WARRANTIES OF MERCHANTABILITY OR FITNESS
+.\" FOR A PARTICULAR PURPOSE. 
+.\" 
+.\" .MH 1 "Intellectual Property" 
+.\" .LP 
+.\" .in 3 
+.\"  
+.\" The IETF takes no position regarding the validity or scope of any
+.\" Intellectual Property Rights or other rights that might be
+.\" claimed to pertain to the implementation or use of the technology
+.\" described in this document or the extent to which any license
+.\" under such rights might or might not be available; nor does it
+.\" represent that it has made any independent effort to identify any
+.\" such rights.  Information on the procedures with respect to
+.\" rights in RFC documents can be found in BCP 78 and BCP 79. 
+.\" 
+.\" Copies of IPR disclosures made to the IETF Secretariat and any
+.\" assurances of licenses to be made available, or the result of an
+.\" attempt made to obtain a general license or permission for the
+.\" use of such proprietary rights by implementers or users of this
+.\" specification can be obtained from the IETF on-line IPR
+.\" repository at http://www.ietf.org/ipr.
+.\" 
+.\" The IETF invites any interested party to bring to its attention
+.\" any copyrights, patents or patent applications, or other
+.\" proprietary rights that may cover technology that may be required
+.\" to implement this standard.  Please address the information to
+.\" the IETF at ietf-ipr@ietf.org. 
+.\" 
+.\" .MH 1 "Acknowledgement"
+.\" .LP 
+.\" .in 3 
+.\" 
+.\" Funding for the RFC Editor function is currently provided by the
+.\" Internet Society. 
+.\" ..

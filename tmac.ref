@@ -1,0 +1,282 @@
+\" Bill Fenner's cross-reference macros.
+\" These go along with GNU groff -ms
+\"
+\"
+\"
+\" .REF <name>
+\"  after an .NH to remember a named reference to this section
+\"
+.de REF
+.ds private*REFtmp \\*[SN]
+.chop private*REFtmp
+.private*REF \\$1 \\*[private*REFtmp]
+..
+\"
+.de private*REF
+\# turn off warnings about undefined macros/strings around this check
+.nr private*REFwarn \\n[.warn]
+.warn \\n[private*REFwarn]-(\\n[private*REFwarn]/512%2*512)
+.if !'\\*[REF\\$1]'' .if ! '\\*[REF\\$1]'\\$2' .tm Warning: Location of reference \\$1 has changed; must reprocess.
+.warn \\n[private*REFwarn]
+.ds REF\\$1 \\$2
+.write refs .ds REF\\$1 \\$2
+..
+\"
+.de private*CITE
+\# turn off warnings about undefined macros/strings around this check
+.nr private*CITEwarn \\n[.warn]
+.warn \\n[private*CITEwarn]-(\\n[private*CITEwarn]/512%2*512)
+.if !'\\*[CITE\\$1]'' .if ! '\\*[REF\\$1]'\\$2' .tm Warning: Location of citation \\$1 has changed; must reprocess.
+.warn \\n[private*CITEwarn]
+.ds CITE\\$1 \\$2
+.write refs .ds CITE\\$1 \\$2
+..
+\"
+\" .FIGREF <name>
+\"  generates the text "Figure <n>: " and associates <name> with
+\"  the figure # assigned
+.nr private*REFfigure 0
+\"
+.de FIGREF
+.nr private*REFfigure +1
+.private*REF \\$1 \\n[private*REFfigure]
+Figure \\n[private*REFfigure]: \c
+..
+\"
+\"
+\" .BIBREF <name>
+\" Used for citations in the bibliography
+.nr private*CITEbib 0
+\"
+.de BIBREF
+.nr private*CITEbib +1
+.private*CITE \\$1 \\n[private*CITEbib]
+[\\n[private*CITEbib]]
+..
+\"
+\" .REFER <name>
+\"  refers to <name>
+.de REFER
+\# note undefined references and possible requirement to re-run
+\# turn off groff warnings about undefined macros/strings around this check
+.nr private*REFwarn \\n[.warn]
+.warn \\n[private*REFwarn]-(\\n[private*REFwarn]/512%2*512)
+.if '\\*[REF\\$1]'' \{
+.tm Warning: undefined reference to \\$1 at line \\n(.c (re-run?)
+.as REF\\$1 [undefined reference]
+\}
+.warn \\n[private*REFwarn]
+.ie \\n(.$==2 \\*[REF\\$1]\\$2 \\c
+.el \\*[REF\\$1] \\c
+..
+\"
+\"
+\" .CITE <name>
+\"  citation of <name>
+.de CITE
+\# note undefined references and possible requirement to re-run
+\# turn off groff warnings about undefined macros/strings around this check
+.nr private*CITEwarn \\n[.warn]
+.warn \\n[private*CITEwarn]-(\\n[private*CITEwarn]/512%2*512)
+.if '\\*[CITE\\$1]'' .tm Warning: undefined reference to \\$1 at line \\n(.c (re-run?)
+.warn \\n[private*CITEwarn]
+.ie \\n(.$==2 [\\*[CITE\\$1]]\\$2 \\c
+.el [\\*[CITE\\$1]] \\c
+..
+\"
+\"
+.de private*REFsave
+.close refs
+.sy grep -v '^.IXS' refs.txt.\\n[$$] > refs.txt
+.sy grep '^.IXS' refs.txt.\\n[$$] | sort -f >> refs.txt
+.sy rm refs.txt.\\n[$$]
+..
+.em private*REFsave
+\"
+\" -----------------------------------------------------------------------
+\"
+\" Table-of-contents macros.
+\" Summary:
+\" - When a reference is encountered, write a call to .TOCE to refs.txt
+\" - When refs.txt is reloaded, .TOCE builds the diverted toc.
+\" - A call to .TOCP at the top prints out the TOC.
+.de TC
+.write refs .TOCE "\\*(SN" \\n[nh*hl] "\\$1" \\n(PN \\n(.c
+..
+.\"
+.\" Much of TOCE is copied from .XS, .XA and .XE (i.e. I dunno why)
+.de TOCE
+.da mytoc*div
+.ev h
+.br
+.par@reset
+.na
+.ll -8n
+.in (n;0)
+.in \\$2-1
+\\$1 \\$3\\a\\t\\$4
+.br
+.ev
+.di
+..
+.\"
+.\" Print the TOC as built by calling the TOCE macros.
+.de TOCP
+.1C
+.ne 3
+.\" .ce 1
+.ps \\n(PS+2
+.ft B
+\\*[TOC]
+.ft
+.ps
+.in 3
+.nf
+.char \[toc*leader-char] .\h'1m'
+.lc \[toc*leader-char]
+.ta (u;\\n[.l]-\\n[.i]-\w'000') (u;\\n[.l]-\\n[.i])R
+.sp 2
+.mytoc*div
+.par@reset
+.if !'\\n[mytoc*lastpage]'\\n(PN' .tm WARNING: TOC got bigger, page numbers changed - RERUN!
+.write refs .nr mytoc*lastpage \\n(PN
+..
+\" -----------------------------------------------------------------------
+\"
+.de IX
+.ie \\n(.$==2 .ds private*PN \\fB\\n(PN\\fR
+.el .ds private*PN \\n(PN
+.ie d private*IX\\$1 \{\
+.    ds private*IX\\$1 \\*[private*IX\\$1],\\*[private*PN]
+.    write refs .ds IX\\$1 \\*[private*IX\\$1]
+.\}
+.el \{\
+.    ds private*IX\\$1 \\*[private*PN]
+.    write refs .ds IX\\$1 \\*[private*IX\\$1]
+.    write refs .IXS \\$1
+.\}
+..
+\"
+.de IXS
+.da ix*div
+.ev h
+.ds ix*tag "\\$1
+.if \\n[.$] .ds ix*num \\*[IX\\$1]
+.par@reset
+.na
+.ll -8n
+.in 0
+.if d ix*num .ix*end-entry
+.ev
+.di
+..
+\"
+.de ix*end-entry
+\\*[ix*tag]\\a\\t\\*[ix*num]
+.br
+.rm ix*num
+.rm ix*tag
+..
+\"
+.ds IXNAME Index
+.de PIX
+.1C
+.if !'\\$1'no' \{\
+.       ce 1
+.       ps \\n[PS]+2
+.       ft B
+\\*[IXNAME]
+.       ft
+.       ps
+.\}
+.nf
+.char \[ix*leader-char] .\h'1m'
+.lc \[ix*leader-char]
+.ta (u;\\n[.l]-\\n[.i]-\w'000') (u;\\n[.l]-\\n[.i])R
+.sp 2
+.ix*div
+.par@reset
+..
+\"
+\" Read in the references saved from last time, and open the file to save more.
+\" (opena it first in case it dowsn't exist)
+.opena refs refs.txt
+.close refs
+.so refs.txt
+.open refs refs.txt.\n[$$]
+.write refs \\" Saved references.  Edit at your own risk!
+\"
+\" Vertical changebar functions borrowed from tcl/tk man pages
+\" and adapted to -ms macros.  Original macros
+\" Copyright (c) 1990-1994 The Regents of the University of California.
+\" Copyright (c) 1994-1996 Sun Microsystems, Inc.
+\"
+\"
+\" .VS ?version? ?br?
+\"	Begin vertical sidebar, for use in marking newly-changed parts
+\"	of man pages.  The first argument is ignored and used for recording
+\"	the version when the .VS was added, so that the sidebars can be
+\"	found and removed when they reach a certain age.  If another argument
+\"	is present, then a line break is forced before starting the sidebar.
+\"
+\" .VE
+\"	End of vertical sidebar.
+\"
+\"	# VS - start vertical sidebar
+\"	# ^Y = starting y location
+\"	# ^v = 1 (for troff;  for nroff this doesn't matter)
+\"
+\" Two strategies:
+\" For nroff: set the right-margin-character (.mc).  When ending, set a
+\"  trap for the next line so that the margin character ends after the
+\"  last line, not on it.  (see ^V)
+\" For troff: remember where we started, draw vertical lines at bottom of
+\"  the page or when we stop.
+.de VS
+.if !"\\$2"" .br
+.mk ^Y
+.ie n 'mc \s12\(br\s0
+.el .nr ^v 1u
+..
+\"	# VE - end of vertical sidebar
+.de VE
+.ie n 'wh (u;\\n(nl+1v) ^V
+.el \{\
+.ev 2
+.nf
+.ti 0
+.mk ^t
+\h'|\\n(.lu+3n'\L'|\\n(^Yu-1v\(bv'\v'\\n(^tu+1v-\\n(^Yu'\h'-|\\n(.lu+3n'
+.sp -1
+.fi
+.ev
+.\}
+.nr ^v 0
+..
+\"	^V - helper for nroff margin character.
+.de ^V
+'mc
+.ch ^V
+..
+\"	# Special macro to handle page bottom:  finish off current
+\"	# box/sidebar if in box/sidebar mode, then invoked standard
+\"	# page bottom macro.
+.de ^B
+.ev 2
+'ti 0
+'nf
+.mk ^t
+.if \\n(^v \{\
+.nr ^x \\n(^tu+1v-\\n(^Yu
+\kx\h'-\\nxu'\h'|\\n(.lu+3n'\ky\L'-\\n(^xu'\v'\\n(^xu'\h'|0u'\c
+.\}
+.bp
+'fi
+.ev
+.if \\n(^v \{\
+.mk ^Y
+.\}
+..
+\" Set bottom margin.
+.if t .wh -1.1i ^B
+.nr ^v 0

@@ -1,0 +1,10 @@
+#!/bin/sh
+cat $1 | tr -d '\015' | sed  -e 's/|-/+/g' -e 's/.//g' -e 's/^[789]//' -e 's/\[1m//g' -e 's/\[0m//g' -e 's///g'| awk '
+BEGIN					{ sucking = 1; first = 1 }
+(sucking == 1) && /^$/			{ next }
+(sucking == 1) && (first == 0) && /^./	{ print "" }
+					{ print ; sucking = 0; first = 0 }
+/\[Page [0-9]*\]$/			{ sucking = 1 }
+'
+# ' $@ | sed -e 's/|-/+/g' -e 's/.//g' -e 's/^[789]//'
+#' $@ | sed -e 's/|-/+/g' -e 's/\(.\)\(.\)/\2/g' -e 's/^[789]//'
