@@ -1,0 +1,30 @@
+#!/usr/local/bin/mscgen -Tsvg
+
+# IFEX Settlement Path - Friends
+#  see http://www.ifex-project.org/our-proposals/ifex/2012-04-11-partial-draft#TOC-Settlement-Paths
+msc {
+
+  a[label="Node A",linecolour="#bbbbbb"], b[label="Node B",linecolour="#bbbbbb"], c[label="Node C",linecolour="#bbbbbb"], w[label="World",linecolour="#bbbbbb"];
+
+  ...;
+
+  a=>a [ label = "I know B delivers money to C with fee <x> in time <y>." ];
+  a=>a [ label = "Node B's route is the most suitable (by some definition)." ];
+  a=>b [ label = "2: EXE('Please initiate the following transaction.')" ];
+  b=>a [ label = "(non-error response indicates everything still good)", linecolor="#ff0000", textcolor="#ff0000" ];
+  b=>b [ label = "3: Transaction confirmed and initiated." ];
+  --- [ label = "either..."];
+  a=>b [ label = "4a: RPT('Funds have arrived.')" ];
+  --- [label = "or/then..."];
+  b=>b [ label = "4b: Confirm funds are here..." ];
+  ---;
+  b=>a [ label = "4c: RPT('Funds confirmed as received.')" ];
+  b=>a [ label = "4.1: EXR('Pending...')" ];
+  b=>c [ label = "4.2: Actual transfer of some nature occurs here (out of IFEX scope.)" ];
+  b=>c [ label = "4.3: RPT('You now have my money.')" ];
+  c=>c [ label = "Check funds are here...", linecolor="#ff0000", textcolor="#ff0000" ];
+  c=>b [ label = "4.4b: RPT('Got it.') (ie. C-proof-of-receipt)" ];
+  b=>a [ label = "1: RPT('Status now SUCCESS',C-proof-of-receipt)" ];
+  a=>b [ label = "2: RPT('Yep, we're all done.')" ];
+
+}

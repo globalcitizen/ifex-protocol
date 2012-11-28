@@ -1,0 +1,39 @@
+#!/usr/local/bin/mscgen -Tsvg
+
+# IFEX Settlement Path - Strangers
+#  see http://www.ifex-project.org/our-proposals/ifex/2012-04-11-partial-draft#TOC-Settlement-Paths
+msc {
+
+  a[label="Node A",linecolour="#bbbbbb"], b[label="Node B",linecolour="#bbbbbb"], c[label="Node C",linecolour="#bbbbbb"], w[label="World",linecolour="#bbbbbb"];
+
+  ...;
+
+  a=>w [ label = "1: Quotation Request", id="Can you deliver funds to Node C's IIBAN?" ];
+  b=>b [ label = "2: I can do that!" ];
+  b=>c [ label = "2.1: RFQ('Want some free money from Node A?')"];
+  w=>c [ label = "Possible flood of responses!", linecolor="#ff0000", textcolor="#ff0000"];
+  c=>b [ label = "2.2: QUO('Most certainly!')"];
+  c=>w [ label = "Possible flood of accepts!", linecolor="#ff0000", textcolor="#ff0000"]; 
+  b=>a [ label = "1: QUO('I can do it for fee <x> in time <y>')" ];
+  w=>a [ label = "(Other responses)" ];
+  ...;
+  a=>a [ label = "Due diligence on all responding nodes.", linecolor="#ff0000", textcolor="#ff0000" ];
+  a=>a [ label = "Node B's response looks like the most suitable (by some definition)." ];
+  a=>b [ label = "2: EXE('I agree. Please initiate the transaction.')" ];
+  b=>a [ label = "(non-error response indicates everything still good)", id="Protects against 'B' denying receipt-of-funds later on", linecolor="#ff0000", textcolor="#ff0000" ];
+  b=>b [ label = "3: Transaction confirmed and initiated." ];
+  --- [ label = "either..."];
+  a=>b [ label = "4a: RPT('Funds have arrived.')" ];
+  --- [label = "or/then..."];
+  b=>b [ label = "4b: Confirm funds are here..." ];
+  ---;
+  b=>a [ label = "4c: RPT('Funds confirmed as received.')" ];
+  b=>a [ label = "4.1: EXR('Pending...')" ];
+  b=>c [ label = "4.2: Actual transfer of some nature occurs here (out of IFEX scope.)" ];
+  b=>c [ label = "4.3: RPT('You now have my money.')" ];
+  c=>c [ label = "Check funds are here...", linecolor="#ff0000", textcolor="#ff0000" ];
+  c=>b [ label = "4.4b: RPT('Got it.') (ie. C-proof-of-receipt)" ];
+  b=>a [ label = "1: RPT('Status now SUCCESS',C-proof-of-receipt)" ];
+  a=>b [ label = "2: RPT('Yep, we're all done.')" ];
+
+}
