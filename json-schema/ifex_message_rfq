@@ -1,0 +1,88 @@
+{
+        "$schema":		"http://json-schema.org/hyper-schema",
+        "id":			"http://schema.ifex-project.org/ifex_message_rfq",
+	"extends": 		{"$ref":"http://schema.ifex-project.org/ifex_message"},
+	"_status":		"draft",
+
+	"properties":{
+
+	 "rfq":{
+          "title":              "Request For Quotation (RFQ)",
+          "description":        "The details of the Request for Quotation.",
+          "type":               "object",
+	  "properties":{
+	   "to":{
+	    "title":		"Recipient",
+	    "description":	"The intended transaction recipient. (Note: may be a privacy issue for widely dispersed RFQs; investigate degree-of-ambiguity options, eg. institution-specific without being endpoint specific)",
+	    "$ref":             "http://www.schema.ifex-project.org/ifex_endpoint",
+	    "required":		true
+	   },
+           "time":{
+	    "title":		"Transaction Time Requirements",
+	    "description":	"Expression of the transaction speed.",
+	    "type":		"object",
+	    "properties":{
+	     "settle_by":{
+	      "title":		"Settle By Date/Time",
+	      "description":	"The date and time before which the transaction must be settled (ie. enter SETTLED state), in ISO format and UTC timezone. For example, 20121110090807 would be 9:08 AM plus 7 seconds on November the 10th, 2012.",
+	      "type":		"string",
+	      "pattern":	"/^[0-9]{14}$/",
+	      "required":	false
+	     },
+	     "done_by":{
+	      "title":		"Done By Date/Time",
+	      "description":	"The date and time before which the transaction must be completed (ie. enter the SUCCESS state), in ISO format and UTC timezone. For example, 20121110090807 would be 9:08 AM plus 7 seconds on November the 10th, 2012.", 
+	      "type":		"string",
+              "pattern":	"/^[0-9]{14}$/",
+              "required":       false
+	     }
+	    },
+	    "required":		false
+
+	   },
+	   "assets":{
+	    "type":		"array",
+	    "items":{
+	     "type":		"object",
+	     "properties":{
+	      "class":{
+	       "title":		"Asset Class",
+	       "description":	"Specifies the vocabulary from which the Asset Type is drawn.  For example, 'ISO4217-A3' for ISO 4217 alpha 3 currencies.",
+	       "type":		"string",
+	       "required":	true
+	      },
+	      "type":{
+	       "title":		"Asset Type",
+	       "description":	"The Asset Type specifies a particular type of asset within the vocabulary specified by the Asset Class.  For example, 'LAK' within the 'ISO4217-A3' (ISO 4217 alpha 3) vocabulary would specify the Kip, the national currency of Laos.",
+	       "type":		"string",
+	       "required":	true
+	      },
+	      "quantity":{
+	       "title":		"Quantity",
+	       "description":	"The quantity of the Asset Type.  For example, given a default Quantity Denomination, the Quantity '1.23' associated with the 'CNY' Asset Type and the 'ISO4217-A3' (ISO 4217 alpha 3) Asset Class would specify one Chinese 'yuan', two 'jiao' and three 'fen'.",
+	       "required":	true
+	      }
+	      "quantity_denomination":{
+	       "title":		"(Possible field; often inherent in certain asset types, irrelevant for others, but no doubt occasionally useful) Specifies the denomination of the asset type in question.",
+	       "description":	"The denomination of the asset in question.  (As yet unspecified format).",
+	       "required":	false
+	      },
+	      "identification":{
+	       "title":		"Identification",
+	       "description":	"Asset identifiers.  For example, the serial numbers of physical assets such as precious metal ingots.",
+	       "type":		"array",
+	       "items":{
+	        "type":		any
+	       },
+	       "required":	false
+	      }
+	     }
+	   },
+	   "required":		false
+
+	  }
+	 }
+
+	}
+
+}

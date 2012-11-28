@@ -1,0 +1,11 @@
+{
+        "$schema":		"http://json-schema.org/hyper-schema",
+        "id":			"http://schema.ifex-project.org/entity_name",
+	"_status":		"draft",
+
+	"properties":{
+          "full_name":          {"type":"string","required":false},
+	  "display_name":	{"type":"string","required":false,"requires":"full_name"}
+        }
+
+}

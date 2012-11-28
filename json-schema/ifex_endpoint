@@ -1,0 +1,18 @@
+{
+        "$schema":		"http://json-schema.org/hyper-schema",
+        "id":			"http://schema.ifex-project.org/ifex_endpoint",
+	"_status":		"concept",
+
+	"properties":{
+	 "iban":{
+	  "type":"string",
+	  "title":"IBAN",
+	  "description":"An International Bank Account Number (IBAN) or Internet International Bank Account Number (IIBAN)",
+	  "pattern":"/^[A-Z]{2}[0-9]{2}[A-Za-z0-9]+$/",
+	  "minlength":5,
+	  "maxlength":34,
+	  "required":false
+	 }
+	}
+
+}

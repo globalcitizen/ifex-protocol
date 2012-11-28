@@ -1,0 +1,21 @@
+{
+        "$schema":		"http://json-schema.org/hyper-schema",
+        "id":			"http://schema.ifex-project.org/ifex_settlement_path_hop",
+	"_status":		"concept",
+
+	"title":		"IFEX Settlement Path Hop",
+	"description":		"The details of a hop within an IFEX settlement path.",
+
+	"properties":{
+
+	 "node":{
+          "title":              "Node",
+          "description":        "The IFEX node at whom this hop occurs.",
+	  "$ref":		"http://schema.ifex-project.org/ifex_node",
+	  "required":		false,
+	  "_notes":		"Node identification strategy is as-yet unclear. In theory a 'party' with regards to a transaction should be an open notion, and a node could function similarly. In practice, the open notion may prevent efficient routing decisions if intermediary/processing nodes have responsibility for multple (ie. hundreds or thousands) of actual parties (individual account endpoints). Therefore there is a benefit in identifying nodes with a segregated identity to those of parties. Ways to identify nodes without introducing issues regarding authentication (eg. MITM or impersonation attacks) include (a) picking a UUID and to linking it with a key fingerprint in some open manner, or (b) effectively using a key fingerprint, which would require mandating one or more fingerprint standards. Given that option 'b' is undesirable from a maintenance standpoint and provides a homogenous target for cryptanalytic attacks, and that option 'a' could potentially be extended to support multiple concurrent algorithms (theoretically increasing security against cryptanalytic algorithm compromise at the cost of increased processing overhead), option 'a' seems more desirable."
+	 },
+
+	}
+
+}

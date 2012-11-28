@@ -1,0 +1,14 @@
+{
+        "$schema":		"http://json-schema.org/hyper-schema",
+        "id":			"http://schema.ifex-project.org/person_id",
+	"_status":		"concept",
+
+	"properties":{
+
+	 "passport":		{"$ref":"http://schema.ifex-project.org/person_id_passport","required":false},
+	 "drivers_license": 	{"$ref":"http://schema.ifex-project.org/person_id_drivers_license","required":false},
+	 "id_card":		{"$ref":"http://schema.ifex-project.org/person_id_id_card","required":false}
+
+	}
+
+}

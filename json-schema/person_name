@@ -1,0 +1,21 @@
+{
+        "$schema":		"http://json-schema.org/hyper-schema",
+        "id":			"http://schema.ifex-project.org/person_name",
+	"_status":		"draft",
+
+	"properties":{
+          "structured_name":{
+           "type":"object",
+           "properties":{
+            "title":            {"type":"string","required":false},
+            "first_name":       {"type":"string","required":false},
+            "middle_name":	{"type":"string","requires":["first_name","last_name"],"required":false},
+            "last_name":        {"type":"string","required":false}
+           },
+           "required":false
+          },
+          "full_name":          {"type":"string","required":false},
+          "preferred_name":     {"type":"string","required":false}
+        }
+
+}

@@ -1,0 +1,41 @@
+{
+        "$schema":		"http://json-schema.org/hyper-schema",
+        "id":			"http://schema.ifex-project.org/geo_country",
+	"_status":		"draft",
+
+	"properties":{
+	  "iso_3166_1_a2":{
+	   "title":		"ISO 3166-1 alpha-2 Code",
+	   "description":	"Capitalized two letter ISO 3166-1 alpha-2 code identifying the country, for example 'FO' (Faroe Islands).",
+	   "type":		"string",
+	   "minLength":		2,
+	   "maxLength":		2,
+	   "pattern":		"/^[A-Z]{2}$/",
+	   "required":		false
+	  },
+          "iso_3166_1_a3":{
+           "title":             "ISO 3166-1 alpha-3 Code",
+           "description":       "Capitalized three letter ISO 3166-1 alpha-3 code identifying the country, for example 'MMR' (Myanmar).",
+           "type":		"string",
+           "minLength":		3,
+           "maxLength":		3,
+           "pattern":		"/^[A-Z]{3}$/",
+           "required":		false
+          },
+          "iso_3166_1_n":{
+           "title":             "ISO 3166-1 Numeric Code",
+           "description":       "Three digit ISO 3166-1 numeric code identifying the country, for example '776' (Tonga).  (Note that codes may include significant leading zeros.)",
+           "type":		"string",
+           "minLength":		3,
+           "maxLength":		3,
+           "pattern":		"/^[0-9]{3}$/",
+           "required":		false
+          },
+	  "full_name":{
+	   "title":		"Full country name",
+	   "description":	"Full human readable name of the country in an arbitrary human language. (Not recommended as a sole specifier due to potential for ambiguity.)",
+	   "required":		false
+	  }
+        }
+
+}

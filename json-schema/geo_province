@@ -1,0 +1,36 @@
+{
+        "$schema":		"http://json-schema.org/hyper-schema",
+        "id":			"http://schema.ifex-project.org/geo_province",
+	"_status":		"draft",
+
+	"properties":{
+	  "iso_3166_2":{
+	   "title":		"ISO 3166-2 Code",
+	   "description":	"ISO 3166-2 code identifying the intranational administrative region, for example 'VN-02' (Lao Cai, Vietnam).",
+	   "type":		"string",
+	   "minLength":		4,
+	   "maxLength":		7,
+	   "pattern":		"/^[A-Z]{2}-[A-Z0-9]{1,3}$/",
+	   "required":		false
+	  },
+	  "freeform_code":{
+	   "title":		"Free Form Province Code",
+	   "description":	"Code from an arbitrary vocabulary representing the state or province.  For example, 'YN' or 'YUN' might represent Yunnan province, given the national context of China.  (Not recommended as a sole identifier due to the potential for ambiguity.",
+	   "type":		"string",
+	   "required":		false
+	  }
+	  "full_name":{
+	   "title":		"Full Name",
+	   "description":	"Full human readable name of the state or province in an arbitrary human language. For example 'Ха́нты-Манси́йский автоно́мный о́круг — Югра́' for the Russian federal subject of Yugra.  (Not recommended as a sole identifier due to potential for ambiguity.)",
+	   "type":		"string",
+	   "required":		false
+	  },
+	  "display_name":{
+	   "title":		"Display Name",
+	   "description":	"Typically a shorter version of the state or province full name for the purposes of display. For example, the display name 'Югра́' instead of the full 'Ха́нты-Манси́йский автоно́мный о́круг — Югра́' for the Russian federal subject of Yugra.",
+	   "type":		"string",
+	   "required":		false
+	  }
+        }
+
+}

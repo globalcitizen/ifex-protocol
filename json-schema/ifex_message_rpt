@@ -1,0 +1,18 @@
+{
+        "$schema":		"http://json-schema.org/hyper-schema",
+        "id":			"http://schema.ifex-project.org/ifex_message_rpt",
+	"extends": 		{"$ref":"http://schema.ifex-project.org/ifex_message"},
+
+	"properties":{
+
+	 "rpt":{
+          "title":              "Report (RPT)",
+          "description":        "The details of the report.",
+          "type":               "object",
+	  "properties":{
+	  }
+	 }
+
+	}
+
+}

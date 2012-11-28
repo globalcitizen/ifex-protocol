@@ -1,0 +1,63 @@
+{
+        "$schema":		"http://json-schema.org/hyper-schema",
+        "id":			"http://schema.ifex-project.org/geo_address",
+	"_status":		"draft",
+
+	"properties":{
+	  "sub_street_address_lines":{
+	   "title":		"Sub Street Level Address",
+	   "description":	"The portion of the address that specifies a location more specific than the street level address, for example 'Apartment 201, Building 3'.  (Note that this field is recommended to segregate where possible, but in some cases may be found as part of the Street Address instead)",
+	   "type":		"array",
+	   "items":{
+	    			"type":"string"
+	   },
+	   "requires":		"street_address_lines",
+	   "required":		false
+	  },
+          "street_address_lines":{
+	   "title":		"Street Level Address",
+	   "description":	"The street address within the city.  For example, '212B Example Road'.",
+           "type":		"array",
+	   "items":{
+	    			"type":"string"
+           },
+	   "requires":		"city",
+           "required":		false
+          },
+	  "district":{
+	   "title":		"District",
+	   "description":	"The district of the city in question.  For example, 'Earls Court' is a district of London.  (Note that this is often superseded by postal code for mailing purposes, but remains useful for humans).",
+	   "type":		"string",
+	   "requires":		"city",
+	   "required":		false
+	  },
+          "city":{
+	   "title":		"City",
+	   "description":	"The city (or town) in question.  For example, Mumbai.",
+	   "type":		"string",
+	   "requires":		"country",
+	   "required":		false
+	  },
+          "province":{
+	   "title":		"Province",
+	   "description":	"The province (or state) in question.  For example, Hawaii.",
+	   "$ref":		"http://www.schema.ifex-project.org/geo_province",
+	   "requires":		"country",
+	   "required":		false
+	  },
+	  "postcode":{
+	   "title":		"Postal Code",
+	   "description":	"The postal or zip code in question.  For example, EC1N8FH (UK) or 90210 (US).",
+	   "type":		"string",
+	   "requires":		"country",
+	   "required":		false
+	  },
+	  "country":{
+	   "title":		"Country",
+	   "description":	"The country in question.  For example, Estonia.",
+	   "$ref":		"http://www.schema.ifex-project.org/geo_country",
+	   "required":		false
+	  }
+        }
+
+}

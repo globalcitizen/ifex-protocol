@@ -1,0 +1,18 @@
+{
+        "$schema":		"http://json-schema.org/hyper-schema",
+        "id":			"http://schema.ifex-project.org/ifex_message_exr",
+	"extends": 		{"$ref":"http://schema.ifex-project.org/ifex_message"},
+
+	"properties":{
+
+	 "exr":{
+          "title":              "Execution Response (EXR)",
+          "description":        "The details of the execution response.",
+          "type":               "object",
+	  "properties":{
+	  }
+	 }
+
+	}
+
+}

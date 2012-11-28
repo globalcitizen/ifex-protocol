@@ -1,0 +1,60 @@
+{
+        "$schema":		"http://json-schema.org/hyper-schema",
+        "id":			"http://schema.ifex-project.org/ifex_message",
+	"_status":		"draft",
+
+	"properties":{
+
+	 "mid":{
+	  "title":		"Message ID",
+	  "description":	"Identifies the IFEX message. May be sequential, arbitrary or absent.",
+	  "type":		"string",
+	  "required":		false
+	 },
+	 "ftid":{
+	  "$ref":		"http://schema.ifex-project.org/ifex_transaction",
+	  "title":		"Financial Transaction ID",
+	  "description":	"Identifies the financial transaction that the message regards.",
+	  "type":		"string",
+	  "pattern":		"/^[A-Z0-9]{13}[0-9]{14}[A-Z0-9]{5}$/",
+	  "required":		false
+	 },
+	 "type":{
+          "title":              "Message Type",
+          "description":        "The type of IFEX message.",
+          "type":               "string",
+	  "enum":		["RFQ","QUO","EXE","EXR","RFR","RPT"],
+	  "minLength":		3,
+	  "maxLength":		3,
+          "pattern":            "/^(?:RFQ|QUO|EXE|EXR|RFR|RPT)$/",
+          "required":           true
+	 },
+         "signatures":{
+          "title":              "Signatures Section",
+          "description":        "Section containing optional message signature(s) for authentication, integrity and non-repudiation purposes.",
+          "type":               "array",
+          "items":{
+           "type":              "object",
+	   "properties":{
+	    "party":		{
+				 "party":{
+				  "title":	"Party Identifier",
+				  "description":"Format to be determined.  This is the party whose signature is presented.",
+				  "required":	false,
+				  "notes":	"The notion of identification is quite fluid.  On the one hand we have traditional reporting requirements (generally instituted by financial markets, institutions or governments) which are most interested in associating activity with a particular account or actual legal person.  On the other hand we have the cryptographic requirement to identify parties to enforce systemic features such as non-repudiation, message integrity, and authentication.  Regarding the notion of parties, we in fact have an IFEX node as a processing entity, in addition to the legal entity or entities who may be the ultimate participants in the more abstract notion of the financial transaction.  Thus, an identifier should be clear in its requirements.  Here, we are seeking to identify a cryptographically sound entity from whom we can extrapolate message integrity over time (ie. through the various hops of a potentially multi-hop IFEX-based settlement process), and in a publicly relatable way (ie. 'party X quoted Y but never followed through' or 'party X reported Y but evidence differed.')"
+				 },
+				 "signature":{
+				  "title":	"Signature",
+				  "description":"The signature of the message at the historic point at which it was signed by the party in question.  Note that this field must be stripped from the structure prior to evaluating the signature. (Use of checksums vs. signatures? Algorithm specification mechanism needed to support extensibility.)",
+				   "type":	"string",
+				   "required":	true
+				 }
+				}
+	   }
+          },
+          "required":           false
+         }
+
+	}
+
+}

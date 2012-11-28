@@ -1,0 +1,18 @@
+{
+        "$schema":		"http://json-schema.org/hyper-schema",
+        "id":			"http://schema.ifex-project.org/ifex_message_exe",
+	"extends": 		{"$ref":"http://schema.ifex-project.org/ifex_message"},
+
+	"properties":{
+
+	 "exe":{
+          "title":              "Execution (EXE)",
+          "description":        "The details of the request for execution.",
+          "type":               "object",
+	  "properties":{
+	  }
+	 }
+
+	}
+
+}

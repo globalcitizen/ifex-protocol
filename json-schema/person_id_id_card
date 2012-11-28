@@ -1,0 +1,18 @@
+{
+        "$schema":		"http://json-schema.org/hyper-schema",
+        "id": 			"http://schema.ifex-project.org/person_id_id_card",
+	"_status":		"concept",
+
+	"properties":{
+
+	 "number": 		{"type":"string","required":true},
+         "issued_country": 	{"$ref":"http://schema.ifex-project.org/geo_country","required":true},
+
+	 "issued_date": 	{"type":"string","pattern":"/^[0-9]{4}-[0-9]{2}-[0-9]{2}$/",required":false},
+	 "issued_city": 	{"$ref":"http://schema.ifex-project.org/geo_city","required":false},
+         "issued_province": 	{"$ref":"http://schema.ifex-project.org/geo_province","required":false},
+	 "expiry_date": 	{"type":"string","pattern":"/^[0-9]{4}-[0-9]{2}-[0-9]{2}$/",required":false},
+
+	}
+
+}

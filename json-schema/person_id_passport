@@ -1,0 +1,17 @@
+{
+        "$schema":		"http://json-schema.org/hyper-schema",
+        "id":			"http://schema.ifex-project.org/person_id_passport",
+	"_status":		"concept",
+
+	"properties":{
+
+	 "number": 		{"type":"string","pattern":"/^[0-9A-Z]{4,9}$/","required":true},
+         "country": 		{"$ref":"http://schema.ifex-project.org/geo_country","required":true},
+
+	 "issued_date":		{"type":"string","pattern":"/^[0-9]{4}-[0-9]{2}-[0-9]{2}$/",required":false},
+	 "issued_place": 	{"$ref":"http://schema.ifex-project.org/geo_city","required":false},
+	 "expiry_date":		{"type":"string","pattern":"/^[0-9]{4}-[0-9]{2}-[0-9]{2}$/",required":false},
+
+	}
+
+}

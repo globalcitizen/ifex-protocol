@@ -1,0 +1,39 @@
+{
+        "$schema":		"http://json-schema.org/hyper-schema",
+        "id":			"http://schema.ifex-project.org/ifex_message_quo",
+	"extends": 		{"$ref":"http://schema.ifex-project.org/ifex_message"},
+	"_status":		"concept",
+
+	"properties":{
+
+	 "quo":{
+          "title":              "Quotation (QUO)",
+          "description":        "The details of the service quotation.",
+          "type":               "object",
+	  "properties":{
+	   "rfq_mid":{
+	    "title":		"Request For Quotation (RFQ) Message ID",
+	    "description":	"The Message ID of the Request For Quotation (RFQ) message for which this Quotation (QUO) was prepared.",
+	    "required":		false
+	   },
+	   "options":{
+	    "title":		"Options",
+	    "description":	"The various settlement options that are available.",
+	    "type":		"array",
+	    "items":{
+	     "properties":{
+	      "settlement_path":{
+	       "title":		"Settlement Path",
+	       "description":	"Details of the proposed settlement path.",
+	       "$ref": 		"http://schema.ifex-project.org/ifex_settlement_path"
+	      }
+	     }
+	    },
+	    "required":		false
+	   }
+	  }
+	 }
+
+	}
+
+}

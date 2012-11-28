@@ -1,0 +1,18 @@
+{
+        "$schema":		"http://json-schema.org/hyper-schema",
+        "id":			"http://schema.ifex-project.org/ifex_message_rfr",
+	"extends": 		{"$ref":"http://schema.ifex-project.org/ifex_message"},
+
+	"properties":{
+
+	 "rfr":{
+          "title":              "Request for Report (RFR)",
+          "description":        "The details of the request for a report.",
+          "type":               "object",
+	  "properties":{
+	  }
+	 }
+
+	}
+
+}

@@ -1,0 +1,13 @@
+{
+        "$schema":		"http://json-schema.org/hyper-schema",
+        "id":			"http://schema.ifex-project.org/entity_identification",
+	"_status":		"concept",
+
+	"properties":{
+
+	 "registration":	{"$ref":"http://schema.ifex-project.org/entity_identification_registration","required":false},
+	 "tax_id":		{"$ref":"http://schema.ifex-project.org/entity_identification_tax_id","required":false}
+
+	}
+
+}

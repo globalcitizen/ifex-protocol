@@ -1,0 +1,39 @@
+{
+        "$schema":		"http://json-schema.org/hyper-schema",
+        "id":			"http://schema.ifex-project.org/ifex_tx_requirement",
+
+	"properties":{
+
+
+/*
+  should have different types such that the following kinds of temporal,
+destination and other validity restrictions can be made... 
+
+             "until":{  
+              "title":          "Valid Until",
+              "description":    "The date and time until which the
+quotation remains valid, in ISO format and UTC timezone.",
+              "required":       false
+             },
+             "recipients":{     
+              "title":          "Valid For Recipients",
+              "description":    "The recipients for which the quotation is
+valid.",
+              "required":       true
+             },
+             "other":{
+              "title":          "Other Validity Restrictions",
+              "description":    "Any further restrictions on the validity
+of the quotation.",
+              "type":           "array",
+              "items":{
+               "type":          "object",
+               "
+              },
+
+*/
+
+
+	}
+
+}

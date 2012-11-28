@@ -1,0 +1,20 @@
+{
+        "$schema":		"http://json-schema.org/hyper-schema",
+        "id":			"http://schema.ifex-project.org/entity",
+	"_status":		"draft",
+
+	"properties":{
+
+	 "person_name":		{"$ref":"http://schema.ifex-project.org/person_name"},
+	 "person_address":	{"$ref":"http://schema.ifex-project.org/geo_address","required":false},
+	 "person_id":		{"$ref":"http://schema.ifex-project.org/person_id","required":false},
+	 "person_properties":	{"type":"any","uniqueItems":true,"required":false},
+
+	 "entity_name":		{"$ref":"http://schema.ifex-project.org/entity_name","required":false},
+	 "entity_address":	{"$ref":"http://schema.ifex-project.org/geo_address","required":false},
+	 "entity_id":		{"$ref":"http://schema.ifex-project.org/entity_identification","required":false},
+         "entity_properties":	{"type":"any","uniqueItems":true,"required":false}
+
+	}
+
+}
