@@ -18,7 +18,7 @@
 .nr PS 11
 .nr VS 13
 .\"XXX macro for setting author
-.ds LF Walter Stanish. Payward Inc.
+.ds LF Walter Stanish.
 .ds RF [Page %]
 .ds CF 
 .ds LH INTERNET-DRAFT
