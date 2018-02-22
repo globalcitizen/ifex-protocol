@@ -1,7 +1,7 @@
 INTERNET-DRAFT                                Walter Stanish
-Intended status: Standards Track                Payward Inc.
-Category: Experimental                         November 2012
-Expires: May 28, 2013
+Intended status: Standards Track
+Category: Experimental                         February 2018
+Expires: August 23, 2018
 
               Internet Financial Exchange Protocol (IFEX)
                              draft-ifex-00
@@ -39,20 +39,20 @@ Status of this Memo
    This Internet-Draft is submitted in full conformance with the
    provisions of BCP 78 and BCP 79.
 
-   This Internet-Draft will expire on May 28, 2013.
+   This Internet-Draft will expire on August 23, 2018.
 
 
 
 
 
-Walter Stanish. Payward Inc.                                    [Page 1]
+Walter Stanish.                                                 [Page 1]
 
-INTERNET-DRAFT            Expires: May 28, 2013            November 2012
+INTERNET-DRAFT          Expires: August 23, 2018           February 2018
 
 
 Copyright Notice
 
-   Copyright (c) 2012 IETF Trust and the persons identified as the
+   Copyright (c) 2018 IETF Trust and the persons identified as the
    document authors. All rights reserved.
 
    This document is subject to BCP 78 and the IETF Trust's Legal
@@ -101,9 +101,9 @@ Copyright Notice
 
 
 
-Walter Stanish. Payward Inc.                        Section 1.  [Page 2]
+Walter Stanish.                                     Section 1.  [Page 2]
 
-INTERNET-DRAFT            Expires: May 28, 2013            November 2012
+INTERNET-DRAFT          Expires: August 23, 2018           February 2018
 
 
 
@@ -157,9 +157,9 @@ Table of Contents
 
 
 
-Walter Stanish. Payward Inc.                        Section 1.  [Page 3]
+Walter Stanish.                                     Section 1.  [Page 3]
 
-INTERNET-DRAFT            Expires: May 28, 2013            November 2012
+INTERNET-DRAFT          Expires: August 23, 2018           February 2018
 
 
      4.2.14. Settlement Path . . . . . . . . . . . . . . . . . . . .  33
@@ -213,9 +213,9 @@ INTERNET-DRAFT            Expires: May 28, 2013            November 2012
 
 
 
-Walter Stanish. Payward Inc.                        Section 1.  [Page 4]
+Walter Stanish.                                     Section 1.  [Page 4]
 
-INTERNET-DRAFT            Expires: May 28, 2013            November 2012
+INTERNET-DRAFT          Expires: August 23, 2018           February 2018
 
 
     12.4. Securities Sale in an ECN; Report to Market. . . . . . . .  53
@@ -269,9 +269,9 @@ INTERNET-DRAFT            Expires: May 28, 2013            November 2012
 
 
 
-Walter Stanish. Payward Inc.                        Section 1.  [Page 5]
+Walter Stanish.                                     Section 1.  [Page 5]
 
-INTERNET-DRAFT            Expires: May 28, 2013            November 2012
+INTERNET-DRAFT          Expires: August 23, 2018           February 2018
 
 
 2.  Preface
@@ -325,9 +325,9 @@ INTERNET-DRAFT            Expires: May 28, 2013            November 2012
 
 
 
-Walter Stanish. Payward Inc.                    Section 2.1.3.  [Page 6]
+Walter Stanish.                                 Section 2.1.3.  [Page 6]
 
-INTERNET-DRAFT            Expires: May 28, 2013            November 2012
+INTERNET-DRAFT          Expires: August 23, 2018           February 2018
 
 
 3.  Requirement
@@ -381,9 +381,9 @@ INTERNET-DRAFT            Expires: May 28, 2013            November 2012
 
 
 
-Walter Stanish. Payward Inc.                      Section 3.1.  [Page 7]
+Walter Stanish.                                   Section 3.1.  [Page 7]
 
-INTERNET-DRAFT            Expires: May 28, 2013            November 2012
+INTERNET-DRAFT          Expires: August 23, 2018           February 2018
 
 
 3.2.  Related Functionality
@@ -437,9 +437,9 @@ INTERNET-DRAFT            Expires: May 28, 2013            November 2012
 
 
 
-Walter Stanish. Payward Inc.                      Section 3.2.  [Page 8]
+Walter Stanish.                                   Section 3.2.  [Page 8]
 
-INTERNET-DRAFT            Expires: May 28, 2013            November 2012
+INTERNET-DRAFT          Expires: August 23, 2018           February 2018
 
 
 3.3.  Use Cases
@@ -493,9 +493,9 @@ INTERNET-DRAFT            Expires: May 28, 2013            November 2012
 
 
 
-Walter Stanish. Payward Inc.                      Section 3.3.  [Page 9]
+Walter Stanish.                                   Section 3.3.  [Page 9]
 
-INTERNET-DRAFT            Expires: May 28, 2013            November 2012
+INTERNET-DRAFT          Expires: August 23, 2018           February 2018
 
 
 3.4.  Soft Requirements
@@ -549,9 +549,9 @@ INTERNET-DRAFT            Expires: May 28, 2013            November 2012
 
 
 
-Walter Stanish. Payward Inc.                     Section 3.4.  [Page 10]
+Walter Stanish.                                  Section 3.4.  [Page 10]
 
-INTERNET-DRAFT            Expires: May 28, 2013            November 2012
+INTERNET-DRAFT          Expires: August 23, 2018           February 2018
 
 
 4.  The Internet Financial Exchange (IFEX) Protocol
@@ -605,9 +605,9 @@ INTERNET-DRAFT            Expires: May 28, 2013            November 2012
 
 
 
-Walter Stanish. Payward Inc.                   Section 4.1.3.  [Page 11]
+Walter Stanish.                                Section 4.1.3.  [Page 11]
 
-INTERNET-DRAFT            Expires: May 28, 2013            November 2012
+INTERNET-DRAFT          Expires: August 23, 2018           February 2018
 
 
 4.2.  Concepts
@@ -661,9 +661,9 @@ IFEX Nodes are participants within an IFEX network.
 
 
 
-Walter Stanish. Payward Inc.                 Section 4.2.3.1.  [Page 12]
+Walter Stanish.                              Section 4.2.3.1.  [Page 12]
 
-INTERNET-DRAFT            Expires: May 28, 2013            November 2012
+INTERNET-DRAFT          Expires: August 23, 2018           February 2018
 
 
     MT84MALT011000012345MTLCAST001S (Example of a Maltese IBAN)
@@ -717,9 +717,9 @@ INTERNET-DRAFT            Expires: May 28, 2013            November 2012
 
 
 
-Walter Stanish. Payward Inc.                 Section 4.2.3.1.  [Page 13]
+Walter Stanish.                              Section 4.2.3.1.  [Page 13]
 
-INTERNET-DRAFT            Expires: May 28, 2013            November 2012
+INTERNET-DRAFT          Expires: August 23, 2018           February 2018
 
 
    The FTID and LL-FTID formats may be expressed in ABNF [RFC5234] as
@@ -773,9 +773,9 @@ INTERNET-DRAFT            Expires: May 28, 2013            November 2012
 
 
 
-Walter Stanish. Payward Inc.                 Section 4.2.3.1.  [Page 14]
+Walter Stanish.                              Section 4.2.3.1.  [Page 14]
 
-INTERNET-DRAFT            Expires: May 28, 2013            November 2012
+INTERNET-DRAFT          Expires: August 23, 2018           February 2018
 
 
    NOTE (2012-10-18): UTCSO specification will be revised for greater
@@ -829,9 +829,9 @@ INTERNET-DRAFT            Expires: May 28, 2013            November 2012
 
 
 
-Walter Stanish. Payward Inc.                 Section 4.2.3.1.  [Page 15]
+Walter Stanish.                              Section 4.2.3.1.  [Page 15]
 
-INTERNET-DRAFT            Expires: May 28, 2013            November 2012
+INTERNET-DRAFT          Expires: August 23, 2018           February 2018
 
 
 4.2.3.2.  Financial Transaction State
@@ -885,9 +885,9 @@ INTERNET-DRAFT            Expires: May 28, 2013            November 2012
 
 
 
-Walter Stanish. Payward Inc.                 Section 4.2.3.2.  [Page 16]
+Walter Stanish.                              Section 4.2.3.2.  [Page 16]
 
-INTERNET-DRAFT            Expires: May 28, 2013            November 2012
+INTERNET-DRAFT          Expires: August 23, 2018           February 2018
 
 
        - Partial Success State (PARTIAL)
@@ -941,9 +941,9 @@ INTERNET-DRAFT            Expires: May 28, 2013            November 2012
 
 
 
-Walter Stanish. Payward Inc.                 Section 4.2.3.2.  [Page 17]
+Walter Stanish.                              Section 4.2.3.2.  [Page 17]
 
-INTERNET-DRAFT            Expires: May 28, 2013            November 2012
+INTERNET-DRAFT          Expires: August 23, 2018           February 2018
 
 
 4.2.3.2.1.  Transition Diagram
@@ -997,9 +997,9 @@ INTERNET-DRAFT            Expires: May 28, 2013            November 2012
 
 
 
-Walter Stanish. Payward Inc.               Section 4.2.3.2.1.  [Page 18]
+Walter Stanish.                            Section 4.2.3.2.1.  [Page 18]
 
-INTERNET-DRAFT            Expires: May 28, 2013            November 2012
+INTERNET-DRAFT          Expires: August 23, 2018           February 2018
 
 
 4.2.4.  IFEX Messages
@@ -1053,9 +1053,9 @@ INTERNET-DRAFT            Expires: May 28, 2013            November 2012
 
 
 
-Walter Stanish. Payward Inc.                   Section 4.2.4.  [Page 19]
+Walter Stanish.                                Section 4.2.4.  [Page 19]
 
-INTERNET-DRAFT            Expires: May 28, 2013            November 2012
+INTERNET-DRAFT          Expires: August 23, 2018           February 2018
 
 
 4.2.4.1.  Message ID
@@ -1109,9 +1109,9 @@ INTERNET-DRAFT            Expires: May 28, 2013            November 2012
 
 
 
-Walter Stanish. Payward Inc.                 Section 4.2.4.1.  [Page 20]
+Walter Stanish.                              Section 4.2.4.1.  [Page 20]
 
-INTERNET-DRAFT            Expires: May 28, 2013            November 2012
+INTERNET-DRAFT          Expires: August 23, 2018           February 2018
 
 
 4.2.5.  Message Types
@@ -1165,9 +1165,9 @@ INTERNET-DRAFT            Expires: May 28, 2013            November 2012
 
 
 
-Walter Stanish. Payward Inc.                   Section 4.2.5.  [Page 21]
+Walter Stanish.                                Section 4.2.5.  [Page 21]
 
-INTERNET-DRAFT            Expires: May 28, 2013            November 2012
+INTERNET-DRAFT          Expires: August 23, 2018           February 2018
 
 
 4.2.6.  Party Identification
@@ -1221,9 +1221,9 @@ INTERNET-DRAFT            Expires: May 28, 2013            November 2012
 
 
 
-Walter Stanish. Payward Inc.                   Section 4.2.6.  [Page 22]
+Walter Stanish.                                Section 4.2.6.  [Page 22]
 
-INTERNET-DRAFT            Expires: May 28, 2013            November 2012
+INTERNET-DRAFT          Expires: August 23, 2018           February 2018
 
 
      In the 'gpg' scheme, a whitespace-stripped version of a GPG key
@@ -1277,9 +1277,9 @@ INTERNET-DRAFT            Expires: May 28, 2013            November 2012
 
 
 
-Walter Stanish. Payward Inc.                   Section 4.2.7.  [Page 23]
+Walter Stanish.                                Section 4.2.7.  [Page 23]
 
-INTERNET-DRAFT            Expires: May 28, 2013            November 2012
+INTERNET-DRAFT          Expires: August 23, 2018           February 2018
 
 
                errors within agreed/requested settlement
@@ -1333,9 +1333,9 @@ INTERNET-DRAFT            Expires: May 28, 2013            November 2012
 
 
 
-Walter Stanish. Payward Inc.                   Section 4.2.7.  [Page 24]
+Walter Stanish.                                Section 4.2.7.  [Page 24]
 
-INTERNET-DRAFT            Expires: May 28, 2013            November 2012
+INTERNET-DRAFT          Expires: August 23, 2018           February 2018
 
 
           - optionally lengthen retry time?
@@ -1389,9 +1389,9 @@ INTERNET-DRAFT            Expires: May 28, 2013            November 2012
 
 
 
-Walter Stanish. Payward Inc.                   Section 4.2.7.  [Page 25]
+Walter Stanish.                                Section 4.2.7.  [Page 25]
 
-INTERNET-DRAFT            Expires: May 28, 2013            November 2012
+INTERNET-DRAFT          Expires: August 23, 2018           February 2018
 
 
           a QUO response, in which case the receipient node
@@ -1445,9 +1445,9 @@ INTERNET-DRAFT            Expires: May 28, 2013            November 2012
 
 
 
-Walter Stanish. Payward Inc.                 Section 4.2.7.1.  [Page 26]
+Walter Stanish.                              Section 4.2.7.1.  [Page 26]
 
-INTERNET-DRAFT            Expires: May 28, 2013            November 2012
+INTERNET-DRAFT          Expires: August 23, 2018           February 2018
 
 
 4.2.7.1.1.  Permanent Errors
@@ -1501,9 +1501,9 @@ INTERNET-DRAFT            Expires: May 28, 2013            November 2012
 
 
 
-Walter Stanish. Payward Inc.                   Section 4.2.8.  [Page 27]
+Walter Stanish.                                Section 4.2.8.  [Page 27]
 
-INTERNET-DRAFT            Expires: May 28, 2013            November 2012
+INTERNET-DRAFT          Expires: August 23, 2018           February 2018
 
 
 4.2.9.  Asset Specification
@@ -1557,9 +1557,9 @@ INTERNET-DRAFT            Expires: May 28, 2013            November 2012
 
 
 
-Walter Stanish. Payward Inc.                 Section 4.2.9.1.  [Page 28]
+Walter Stanish.                              Section 4.2.9.1.  [Page 28]
 
-INTERNET-DRAFT            Expires: May 28, 2013            November 2012
+INTERNET-DRAFT          Expires: August 23, 2018           February 2018
 
 
       upon the ISO4217 Alpha-3 extended code set.  It includes
@@ -1613,9 +1613,9 @@ INTERNET-DRAFT            Expires: May 28, 2013            November 2012
 
 
 
-Walter Stanish. Payward Inc.                 Section 4.2.9.3.  [Page 29]
+Walter Stanish.                              Section 4.2.9.3.  [Page 29]
 
-INTERNET-DRAFT            Expires: May 28, 2013            November 2012
+INTERNET-DRAFT          Expires: August 23, 2018           February 2018
 
 
        - The ISIN Asset Class
@@ -1669,9 +1669,9 @@ INTERNET-DRAFT            Expires: May 28, 2013            November 2012
 
 
 
-Walter Stanish. Payward Inc.                Section 4.2.10.3.  [Page 30]
+Walter Stanish.                             Section 4.2.10.3.  [Page 30]
 
-INTERNET-DRAFT            Expires: May 28, 2013            November 2012
+INTERNET-DRAFT          Expires: August 23, 2018           February 2018
 
 
 4.2.11.  Temporal Specification
@@ -1725,9 +1725,9 @@ INTERNET-DRAFT            Expires: May 28, 2013            November 2012
 
 
 
-Walter Stanish. Payward Inc.                Section 4.2.13.1.  [Page 31]
+Walter Stanish.                             Section 4.2.13.1.  [Page 31]
 
-INTERNET-DRAFT            Expires: May 28, 2013            November 2012
+INTERNET-DRAFT          Expires: August 23, 2018           February 2018
 
 
    execution and settlement.
@@ -1781,9 +1781,9 @@ INTERNET-DRAFT            Expires: May 28, 2013            November 2012
 
 
 
-Walter Stanish. Payward Inc.                Section 4.2.13.2.  [Page 32]
+Walter Stanish.                             Section 4.2.13.2.  [Page 32]
 
-INTERNET-DRAFT            Expires: May 28, 2013            November 2012
+INTERNET-DRAFT          Expires: August 23, 2018           February 2018
 
 
     - identifier
@@ -1837,9 +1837,9 @@ INTERNET-DRAFT            Expires: May 28, 2013            November 2012
 
 
 
-Walter Stanish. Payward Inc.                  Section 4.2.14.  [Page 33]
+Walter Stanish.                               Section 4.2.14.  [Page 33]
 
-INTERNET-DRAFT            Expires: May 28, 2013            November 2012
+INTERNET-DRAFT          Expires: August 23, 2018           February 2018
 
 
    1. [TX1] IFEX Node 'A' may issue a Quotation Request (RFQ) for
@@ -1893,9 +1893,9 @@ INTERNET-DRAFT            Expires: May 28, 2013            November 2012
 
 
 
-Walter Stanish. Payward Inc.                  Section 4.2.14.  [Page 34]
+Walter Stanish.                               Section 4.2.14.  [Page 34]
 
-INTERNET-DRAFT            Expires: May 28, 2013            November 2012
+INTERNET-DRAFT          Expires: August 23, 2018           February 2018
 
 
              - reliability
@@ -1949,9 +1949,9 @@ INTERNET-DRAFT            Expires: May 28, 2013            November 2012
 
 
 
-Walter Stanish. Payward Inc.                  Section 4.2.15.  [Page 35]
+Walter Stanish.                               Section 4.2.15.  [Page 35]
 
-INTERNET-DRAFT            Expires: May 28, 2013            November 2012
+INTERNET-DRAFT          Expires: August 23, 2018           February 2018
 
 
 5.  Implementation Considerations
@@ -2005,9 +2005,9 @@ INTERNET-DRAFT            Expires: May 28, 2013            November 2012
 
 
 
-Walter Stanish. Payward Inc.                     Section 5.3.  [Page 36]
+Walter Stanish.                                  Section 5.3.  [Page 36]
 
-INTERNET-DRAFT            Expires: May 28, 2013            November 2012
+INTERNET-DRAFT          Expires: August 23, 2018           February 2018
 
 
 5.3.1.  Maximum Transaction Throughput
@@ -2061,9 +2061,9 @@ INTERNET-DRAFT            Expires: May 28, 2013            November 2012
 
 
 
-Walter Stanish. Payward Inc.                   Section 5.4.2.  [Page 37]
+Walter Stanish.                                Section 5.4.2.  [Page 37]
 
-INTERNET-DRAFT            Expires: May 28, 2013            November 2012
+INTERNET-DRAFT          Expires: August 23, 2018           February 2018
 
 
 6.  Protocol Design Considerations
@@ -2117,9 +2117,9 @@ INTERNET-DRAFT            Expires: May 28, 2013            November 2012
 
 
 
-Walter Stanish. Payward Inc.                     Section 6.3.  [Page 38]
+Walter Stanish.                                  Section 6.3.  [Page 38]
 
-INTERNET-DRAFT            Expires: May 28, 2013            November 2012
+INTERNET-DRAFT          Expires: August 23, 2018           February 2018
 
 
    at 5 characters as it rounds out the overall FTID length neatly to 32
@@ -2173,9 +2173,9 @@ INTERNET-DRAFT            Expires: May 28, 2013            November 2012
 
 
 
-Walter Stanish. Payward Inc.                     Section 6.5.  [Page 39]
+Walter Stanish.                                  Section 6.5.  [Page 39]
 
-INTERNET-DRAFT            Expires: May 28, 2013            November 2012
+INTERNET-DRAFT          Expires: August 23, 2018           February 2018
 
 
    perceived need for multiple transaction type affinities per
@@ -2229,9 +2229,9 @@ INTERNET-DRAFT            Expires: May 28, 2013            November 2012
 
 
 
-Walter Stanish. Payward Inc.                     Section 6.6.  [Page 40]
+Walter Stanish.                                  Section 6.6.  [Page 40]
 
-INTERNET-DRAFT            Expires: May 28, 2013            November 2012
+INTERNET-DRAFT          Expires: August 23, 2018           February 2018
 
 
     - productivity
@@ -2285,9 +2285,9 @@ INTERNET-DRAFT            Expires: May 28, 2013            November 2012
 
 
 
-Walter Stanish. Payward Inc.                     Section 6.6.  [Page 41]
+Walter Stanish.                                  Section 6.6.  [Page 41]
 
-INTERNET-DRAFT            Expires: May 28, 2013            November 2012
+INTERNET-DRAFT          Expires: August 23, 2018           February 2018
 
 
      Balance analysis   Review and approval of entertainment expenses
@@ -2341,9 +2341,9 @@ INTERNET-DRAFT            Expires: May 28, 2013            November 2012
 
 
 
-Walter Stanish. Payward Inc.                     Section 6.7.  [Page 42]
+Walter Stanish.                                  Section 6.7.  [Page 42]
 
-INTERNET-DRAFT            Expires: May 28, 2013            November 2012
+INTERNET-DRAFT          Expires: August 23, 2018           February 2018
 
 
 6.7.1.  Value Conceptual Simplicity
@@ -2397,9 +2397,9 @@ INTERNET-DRAFT            Expires: May 28, 2013            November 2012
 
 
 
-Walter Stanish. Payward Inc.                   Section 6.7.3.  [Page 43]
+Walter Stanish.                                Section 6.7.3.  [Page 43]
 
-INTERNET-DRAFT            Expires: May 28, 2013            November 2012
+INTERNET-DRAFT          Expires: August 23, 2018           February 2018
 
 
    remote states MUST be known at all times.  Such information SHOULD be
@@ -2453,9 +2453,9 @@ LEGAL:
 
 
 
-Walter Stanish. Payward Inc.                   Section 6.7.6.  [Page 44]
+Walter Stanish.                                Section 6.7.6.  [Page 44]
 
-INTERNET-DRAFT            Expires: May 28, 2013            November 2012
+INTERNET-DRAFT          Expires: August 23, 2018           February 2018
 
 
    approach allowed implementers to provide varying levels of feedback
@@ -2509,9 +2509,9 @@ INTERNET-DRAFT            Expires: May 28, 2013            November 2012
 
 
 
-Walter Stanish. Payward Inc.                   Section 6.7.6.  [Page 45]
+Walter Stanish.                                Section 6.7.6.  [Page 45]
 
-INTERNET-DRAFT            Expires: May 28, 2013            November 2012
+INTERNET-DRAFT          Expires: August 23, 2018           February 2018
 
 
 7.  Security Considerations
@@ -2565,9 +2565,9 @@ routing       | Latency   | [TOR], [FREENET] | | Chaffing and winnowing
 
 
 
-Walter Stanish. Payward Inc.                 Section 7.1.1.1.  [Page 46]
+Walter Stanish.                              Section 7.1.1.1.  [Page 46]
 
-INTERNET-DRAFT            Expires: May 28, 2013            November 2012
+INTERNET-DRAFT          Expires: August 23, 2018           February 2018
 
 
 7.1.1.2.  Non-repudiation
@@ -2621,9 +2621,9 @@ INTERNET-DRAFT            Expires: May 28, 2013            November 2012
 
 
 
-Walter Stanish. Payward Inc.                   Section 7.3.1.  [Page 47]
+Walter Stanish.                                Section 7.3.1.  [Page 47]
 
-INTERNET-DRAFT            Expires: May 28, 2013            November 2012
+INTERNET-DRAFT          Expires: August 23, 2018           February 2018
 
 
 7.3.1.1.  Maximum Message Sizes
@@ -2677,9 +2677,9 @@ INTERNET-DRAFT            Expires: May 28, 2013            November 2012
 
 
 
-Walter Stanish. Payward Inc.                 Section 7.3.2.2.  [Page 48]
+Walter Stanish.                              Section 7.3.2.2.  [Page 48]
 
-INTERNET-DRAFT            Expires: May 28, 2013            November 2012
+INTERNET-DRAFT          Expires: August 23, 2018           February 2018
 
 
 8.  Lock-in Considerations
@@ -2733,9 +2733,9 @@ INTERNET-DRAFT            Expires: May 28, 2013            November 2012
 
 
 
-Walter Stanish. Payward Inc.                       Section 8.  [Page 49]
+Walter Stanish.                                    Section 8.  [Page 49]
 
-INTERNET-DRAFT            Expires: May 28, 2013            November 2012
+INTERNET-DRAFT          Expires: August 23, 2018           February 2018
 
 
 9.  References
@@ -2789,9 +2789,9 @@ INTERNET-DRAFT            Expires: May 28, 2013            November 2012
 
 
 
-Walter Stanish. Payward Inc.                     Section 9.1.  [Page 50]
+Walter Stanish.                                  Section 9.1.  [Page 50]
 
-INTERNET-DRAFT            Expires: May 28, 2013            November 2012
+INTERNET-DRAFT          Expires: August 23, 2018           February 2018
 
 
 9.2.  Informative References
@@ -2845,9 +2845,9 @@ INTERNET-DRAFT            Expires: May 28, 2013            November 2012
 
 
 
-Walter Stanish. Payward Inc.                     Section 9.2.  [Page 51]
+Walter Stanish.                                  Section 9.2.  [Page 51]
 
-INTERNET-DRAFT            Expires: May 28, 2013            November 2012
+INTERNET-DRAFT          Expires: August 23, 2018           February 2018
 
 
 10.  Contributors
@@ -2872,8 +2872,7 @@ INTERNET-DRAFT            Expires: May 28, 2013            November 2012
 11.  Authors' Addresses
 
 
-   Walter Stanish <walter@stani.sh> Payward Inc.  On behalf of the IFEX
-   Project http://ifex-project.org/
+   Walter Stanish <walter@stani.sh>
 
 
 
@@ -2901,9 +2900,10 @@ INTERNET-DRAFT            Expires: May 28, 2013            November 2012
 
 
 
-Walter Stanish. Payward Inc.                      Section 11.  [Page 52]
+
+Walter Stanish.                                   Section 11.  [Page 52]
 
-INTERNET-DRAFT            Expires: May 28, 2013            November 2012
+INTERNET-DRAFT          Expires: August 23, 2018           February 2018
 
 
 12.  Appendix 0: Examples
@@ -2957,9 +2957,9 @@ Align to initial examples in use cases section.
 
 
 
-Walter Stanish. Payward Inc.                    Section 12.5.  [Page 53]
+Walter Stanish.                                 Section 12.5.  [Page 53]
 
-INTERNET-DRAFT            Expires: May 28, 2013            November 2012
+INTERNET-DRAFT          Expires: August 23, 2018           February 2018
 
 
 13.  Appendix A: Summary of Existing Protocols
@@ -3013,9 +3013,9 @@ Notes:
 
 
 
-Walter Stanish. Payward Inc.                      Section 13.  [Page 54]
+Walter Stanish.                                   Section 13.  [Page 54]
 
-INTERNET-DRAFT            Expires: May 28, 2013            November 2012
+INTERNET-DRAFT          Expires: August 23, 2018           February 2018
 
 
 13.1.  FIX
@@ -3069,9 +3069,9 @@ INTERNET-DRAFT            Expires: May 28, 2013            November 2012
 
 
 
-Walter Stanish. Payward Inc.                    Section 13.3.  [Page 55]
+Walter Stanish.                                 Section 13.3.  [Page 55]
 
-INTERNET-DRAFT            Expires: May 28, 2013            November 2012
+INTERNET-DRAFT          Expires: August 23, 2018           February 2018
 
 
    selection, business and technical level errors, party identification,
@@ -3125,9 +3125,9 @@ INTERNET-DRAFT            Expires: May 28, 2013            November 2012
 
 
 
-Walter Stanish. Payward Inc.                    Section 13.5.  [Page 56]
+Walter Stanish.                                 Section 13.5.  [Page 56]
 
-INTERNET-DRAFT            Expires: May 28, 2013            November 2012
+INTERNET-DRAFT          Expires: August 23, 2018           February 2018
 
 
     * Stifling of innovation through high monetary, bureaucratic
@@ -3181,9 +3181,9 @@ INTERNET-DRAFT            Expires: May 28, 2013            November 2012
 
 
 
-Walter Stanish. Payward Inc.                    Section 13.5.  [Page 57]
+Walter Stanish.                                 Section 13.5.  [Page 57]
 
-INTERNET-DRAFT            Expires: May 28, 2013            November 2012
+INTERNET-DRAFT          Expires: August 23, 2018           February 2018
 
 
 14.  Appendix P: Philosophy
@@ -3237,9 +3237,9 @@ INTERNET-DRAFT            Expires: May 28, 2013            November 2012
 
 
 
-Walter Stanish. Payward Inc.                      Section 14.  [Page 58]
+Walter Stanish.                                   Section 14.  [Page 58]
 
-INTERNET-DRAFT            Expires: May 28, 2013            November 2012
+INTERNET-DRAFT          Expires: August 23, 2018           February 2018
 
 
 15.  Appendix S: Sales Pitch
@@ -3293,9 +3293,9 @@ protocol Z and maintaining custom B2B and online banking protocols?
 
 
 
-Walter Stanish. Payward Inc.                    Section 15.1.  [Page 59]
+Walter Stanish.                                 Section 15.1.  [Page 59]
 
-INTERNET-DRAFT            Expires: May 28, 2013            November 2012
+INTERNET-DRAFT          Expires: August 23, 2018           February 2018
 
 
 15.2.  Businesses
@@ -3349,9 +3349,9 @@ INTERNET-DRAFT            Expires: May 28, 2013            November 2012
 
 
 
-Walter Stanish. Payward Inc.                    Section 15.2.  [Page 60]
+Walter Stanish.                                 Section 15.2.  [Page 60]
 
-INTERNET-DRAFT            Expires: May 28, 2013            November 2012
+INTERNET-DRAFT          Expires: August 23, 2018           February 2018
 
 
 15.3.  End Users
@@ -3405,9 +3405,9 @@ INTERNET-DRAFT            Expires: May 28, 2013            November 2012
 
 
 
-Walter Stanish. Payward Inc.                    Section 15.7.  [Page 61]
+Walter Stanish.                                 Section 15.7.  [Page 61]
 
-INTERNET-DRAFT            Expires: May 28, 2013            November 2012
+INTERNET-DRAFT          Expires: August 23, 2018           February 2018
 
 
 16.  Appendix Z: TODO
@@ -3461,9 +3461,9 @@ INTERNET-DRAFT            Expires: May 28, 2013            November 2012
 
 
 
-Walter Stanish. Payward Inc.                      Section 16.  [Page 62]
+Walter Stanish.                                   Section 16.  [Page 62]
 
-INTERNET-DRAFT            Expires: May 28, 2013            November 2012
+INTERNET-DRAFT          Expires: August 23, 2018           February 2018
 
 
           Note that mandating some support for various specifiers is
@@ -3517,4 +3517,4 @@ INTERNET-DRAFT            Expires: May 28, 2013            November 2012
 
 
 
-Walter Stanish. Payward Inc.                      Section 16.  [Page 63]
+Walter Stanish.                                   Section 16.  [Page 63]

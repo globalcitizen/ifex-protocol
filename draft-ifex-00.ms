@@ -4,7 +4,7 @@
 .\"
 .so tmac.id
 .tl 'INTERNET-DRAFT''Walter Stanish'
-.tl 'Intended status: Standards Track''Payward Inc.'
+.tl 'Intended status: Standards Track'''
 .tl 'Category: Experimental''\*(MO \n[*xyear]'
 .tl 'Expires: \*[*XP]'''
 .LP
@@ -1963,9 +1963,6 @@ of this proposal is acknowledged.
 
 Walter Stanish 
 <walter@stani.sh>
-Payward Inc.
-On behalf of the IFEX Project
-http://ifex-project.org/
 
 .bp
 .MH 1 "Appendix 0: Examples"
