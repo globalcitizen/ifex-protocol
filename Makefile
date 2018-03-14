@@ -41,4 +41,4 @@ GROFF_FLAGS=	-U
 	# 1st pass: create references
 	tbl $< | groff -ms ${GROFF_FLAGS} -Tascii > /dev/null 2>&1
 	# 2nd pass: create document
-	tbl $< | groff -ms ${GROFF_FLAGS} -Tascii | ./todraft > $@
+	tbl $< | groff -ms ${GROFF_FLAGS} -Tascii | ./build-utilities/todraft > $@
