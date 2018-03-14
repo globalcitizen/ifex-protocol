@@ -1,23 +1,17 @@
 Internet Financial EXchange (IFEX) Protocol
 ===========================================
 
-Development of the IFEX Protocol, for http://ifex-project.org/
+The Internet Financial Exchange (IFEX) protocol facilitates the 
+description, negotiation and management of economic transactions.
 
-```
-   The Internet Financial Exchange (IFEX) protocol facilitates the
-   negotiation of financial transactions between internet-based
-   financial endpoints.
-```
-
-The protocol complements other proposals by the IFEX Project that
-are available at http://ifex-project.org/our-proposals/
+The protocol utilizes, references and complements the following proposals:
+ * [IIBAN](https://github.com/globalcitizen/iiban): internet international bank account numbers
+ * [IMIC](https://github.com/globalcitizen/imic): internet market identification
+ * [X-ISO4217-A3](https://github.com/globalcitizen/x-iso4217-a3): registry of unofficial ISO-compatible asset type codepoints
 
 Status
 ------
-The document is really quite an early draft stage, though various
-key design decisions have been made that seem appropriate given
-research completed thus far in to existing protocols and settlement
-systems.
+In development.
 
 Documentation
 -------------
@@ -30,6 +24,9 @@ Documentation
   Contains proposed JSON Schema for various message types/elements.
   These are also hosted at http://schema.ifex-project.org/. For
   more information on JSON Schema, see http://json-schema.org/
+
+* __old/__:
+  Prior documentation from initial development era ~2012.
 
 Building
 --------
